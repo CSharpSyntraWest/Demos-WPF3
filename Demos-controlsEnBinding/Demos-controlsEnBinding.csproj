@@ -67,6 +67,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\DemoCustomConverter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -79,6 +83,7 @@
     <Compile Include="Models\Persoon.cs" />
     <Compile Include="Models\Werknemer.cs" />
     <Compile Include="Models\WerknemersCollectie.cs" />
+    <Compile Include="Utility\DateConverter.cs" />
     <Compile Include="Utility\ObservableObject.cs" />
     <Compile Include="ViewModels\DatumViewModel.cs" />
     <Compile Include="ViewModels\PersonenViewModel.cs" />
@@ -91,6 +96,9 @@
     </Compile>
     <Compile Include="Views\ContextMenuDemo.xaml.cs">
       <DependentUpon>ContextMenuDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DemoCustomConverter.xaml.cs">
+      <DependentUpon>DemoCustomConverter.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

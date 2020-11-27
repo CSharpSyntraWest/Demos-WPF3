@@ -73,6 +73,9 @@
                     <CheckBox x:Name="checkImageZichtbaar"  HorizontalAlignment="Center" Content="Image is zichtbaar"/>
                     </StackPanel>
           </TabItem>
+                <TabItem Header="CustomConverterDateTimeToString">
+                    <views:DemoCustomConverter/>
+                </TabItem> 
      </TabControl>
     </StackPanel>
    </DockPanel>
