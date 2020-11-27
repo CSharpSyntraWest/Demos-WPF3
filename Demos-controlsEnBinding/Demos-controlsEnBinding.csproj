@@ -55,6 +55,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Views\BindingClassDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\ContextMenuDemo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -70,7 +74,11 @@
     <Compile Include="Models\DataOperaties.cs" />
     <Compile Include="Models\Werknemer.cs" />
     <Compile Include="Models\WerknemersCollectie.cs" />
+    <Compile Include="ViewModels\DatumViewModel.cs" />
     <Compile Include="ViewModels\WerknemerVM.cs" />
+    <Compile Include="Views\BindingClassDemo.xaml.cs">
+      <DependentUpon>BindingClassDemo.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ContextMenuDemo.xaml.cs">
       <DependentUpon>ContextMenuDemo.xaml</DependentUpon>
     </Compile>

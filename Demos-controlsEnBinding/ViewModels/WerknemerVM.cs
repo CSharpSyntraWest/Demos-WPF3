@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,7 +24,8 @@ namespace Demos_controlsEnBinding.ViewModels
             get { return _recordIndex; }
             set { _recordIndex = value;
                 OnPropertyChanged(nameof(RecordIndex));
-               }
+                Debug.WriteLine(_recordIndex);
+            }
         }
         public WerknemersCollectie Werknemers
         {
