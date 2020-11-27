@@ -27,7 +27,7 @@ namespace Demos_controlsEnBinding
 
         private void TreeViewItem_Expanded(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Je hebt mij open geklikt");
+            //MessageBox.Show("Je hebt mij open geklikt");
         }
     }
 }

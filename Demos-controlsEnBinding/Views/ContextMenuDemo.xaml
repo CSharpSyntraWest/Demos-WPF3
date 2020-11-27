@@ -19,7 +19,12 @@
                 <DataGridTextColumn Header="Loon" Binding="{Binding Salaris}"/>
                 <DataGridTextColumn Header="Functie" Binding="{Binding Functie}"/>
             </DataGrid.Columns>
-            
+            <DataGrid.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Toevoegen"/>
+                    <MenuItem Header="Verwijderen"/>
+                </ContextMenu>
+            </DataGrid.ContextMenu>
         </DataGrid>
     </Grid>
 </UserControl>
