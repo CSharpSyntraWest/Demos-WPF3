@@ -6,6 +6,9 @@
         xmlns:local="clr-namespace:Demos_controlsEnBinding" xmlns:views="clr-namespace:Demos_controlsEnBinding.Views"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+    </Window.Resources>
     <Window.CommandBindings>
         <CommandBinding Command="New" Executed="NewCommand"/>
         <CommandBinding Command="Open" Executed="OpenCommand"/>
@@ -62,7 +65,15 @@
         <TabItem Header="Binding Collectie op ListBox">
             <views:BindCollectieOpListBox/>
         </TabItem>
-    </TabControl>
-        </StackPanel>
-    </DockPanel>
+         <TabItem Header="DemoBoolToVisibilityConverter">
+                    <StackPanel>
+                    <Image Height="150" Width="150"  Source="C4koydo.jpg" Visibility="{Binding ElementName=checkImageZichtbaar,Path=IsChecked,
+                        Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                        
+                    <CheckBox x:Name="checkImageZichtbaar"  HorizontalAlignment="Center" Content="Image is zichtbaar"/>
+                    </StackPanel>
+          </TabItem>
+     </TabControl>
+    </StackPanel>
+   </DockPanel>
 </Window>
