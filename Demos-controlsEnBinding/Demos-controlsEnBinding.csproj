@@ -55,6 +55,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Views\BindCollectieOpListBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\BindingClassDemo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -72,10 +76,16 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\DataOperaties.cs" />
+    <Compile Include="Models\Persoon.cs" />
     <Compile Include="Models\Werknemer.cs" />
     <Compile Include="Models\WerknemersCollectie.cs" />
+    <Compile Include="Utility\ObservableObject.cs" />
     <Compile Include="ViewModels\DatumViewModel.cs" />
+    <Compile Include="ViewModels\PersonenViewModel.cs" />
     <Compile Include="ViewModels\WerknemerVM.cs" />
+    <Compile Include="Views\BindCollectieOpListBox.xaml.cs">
+      <DependentUpon>BindCollectieOpListBox.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\BindingClassDemo.xaml.cs">
       <DependentUpon>BindingClassDemo.xaml</DependentUpon>
     </Compile>

@@ -23,11 +23,43 @@ namespace Demos_controlsEnBinding
         public MainWindow()
         {
             InitializeComponent();
+            _isAangepast = false;
         }
-
+        private bool _isAangepast;
         private void TreeViewItem_Expanded(object sender, RoutedEventArgs e)
         {
             //MessageBox.Show("Je hebt mij open geklikt");
+        }
+
+        private void NewCommand(object sender, ExecutedRoutedEventArgs e)
+        {
+            MessageBox.Show("NewCommand uitgevoerd met " + e.Source.ToString());
+            _isAangepast = false;
+        }
+
+
+
+        private void SaveCommand_Excecuted(object sender, ExecutedRoutedEventArgs e)
+        {
+            MessageBox.Show("SaveCommand uitgevoerd met " + e.Source.ToString());
+            _isAangepast = false;
+
+        }
+        private void SaveCommand_CanExecute(object sender, CanExecuteRoutedEventArgs e)
+        {
+            e.CanExecute = _isAangepast;
+
+        }
+        private  void OpenCommand(object sender, ExecutedRoutedEventArgs e)
+        {
+         
+             MessageBox.Show("OpenCommand uitgevoerd met " + e.Source.ToString());
+            _isAangepast = false;
+        }
+
+        private void txtInput_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            _isAangepast = true;
         }
     }
 }

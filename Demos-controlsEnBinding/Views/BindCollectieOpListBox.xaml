@@ -1,0 +1,26 @@
+﻿<UserControl x:Class="Demos_controlsEnBinding.Views.BindCollectieOpListBox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Demos_controlsEnBinding.Views" 
+             xmlns:viewmodels="clr-namespace:Demos_controlsEnBinding.ViewModels"
+             mc:Ignorable="d" >
+    <UserControl.Resources>
+            <viewmodels:PersonenViewModel x:Key="PersonenVM"/>
+    </UserControl.Resources>
+    <Grid DataContext="{Binding Source={StaticResource PersonenVM}}">
+        <ListBox Grid.Row="0" Grid.Column="0" HorizontalAlignment="Stretch"
+                     Margin="10" Name="listBox1" ItemsSource="{Binding Path=Personen}">
+            <ListBox.ItemTemplate>
+                <DataTemplate DataType="Persoon">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding VoorNaam}"/>
+                        <TextBlock Text=" "/>
+                        <TextBlock Text="{Binding FamilieNaam}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</UserControl>
