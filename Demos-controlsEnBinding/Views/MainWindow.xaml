@@ -1,0 +1,27 @@
+﻿<Window x:Class="Demos_controlsEnBinding.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Demos_controlsEnBinding"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <TabControl>
+        <TabItem Header="Treeview">
+            <TreeView>
+                <TreeViewItem Header="Niveau 1" Height="150">
+                    <TreeViewItem Header="Niveau 2.1" />
+                    <TreeViewItem Header="Niveau 2.2" Expanded="TreeViewItem_Expanded"  IsExpanded="True">
+                        <TreeViewItem Header="Niveau 3.1" />
+                        <TreeViewItem Header="Niveau 3.2" />
+                    </TreeViewItem>
+                    <TreeViewItem Header="Niveau 2.3" />
+                </TreeViewItem>
+            </TreeView> 
+            
+        </TabItem>
+        <TabItem Header="Context menu">
+            <local:ContextMenuDemo/>
+        </TabItem>
+    </TabControl>
+</Window>
